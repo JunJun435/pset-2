@@ -14,7 +14,7 @@ const t1=Number(scanner.question());
 const t2=Number(scanner.question());
 const t3=Number(scanner.question());
 const tweight=((t1 + t2 + t3)*.5)/3;
-const grade =(hweight + qweight + tweight);
-totalGrade=grade.toLocaleString('en')
-
-console.log("\nYour marking period grade is " + totalGrade+"." );
+const grade=((hweight + qweight + tweight)/100).toLocaleString('en',{
+   style:'percent',maximumFractionDigits: 2, minimumFractionDigits: 2
+})
+console.log("\nYour marking period grade is " + grade +"." );
